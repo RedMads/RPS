@@ -4,7 +4,7 @@ rock paper scissors game written in ruby !
 
 # Screenshots
 
-![fk_brain](https://github.com/RedMads/RPS/blob/main/screenshots/main.png)
+![RPS](https://github.com/RedMads/RPS/blob/main/screenshots/main.png)
 
 
 # install for linux
