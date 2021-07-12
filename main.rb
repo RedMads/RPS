@@ -25,12 +25,6 @@ class RPS
 
     end
 
-    def test()
-
-        puts @elements["rock"]
-
-    end
-
     def clear()
         
         if OS.linux? or OS.mac?
@@ -163,7 +157,7 @@ class RPS
             when "player win"
                 @rounds -= 1
                 @player_wins += 1
-                puts "[$] Player win this round (#{@player_wins}/3})!"
+                puts "[$] Player win this round (#{@player_wins}/3)!"
 
             when "computer win"
                 @rounds -= 1
