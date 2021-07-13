@@ -1,9 +1,28 @@
+=begin
+-------------------------------------------------------
+Hello guys im RedMad :$ [2021/7/13] i made this game!
+
+Rock, Paper, Scissors game in ruby !
+
+
+Contact us:
+
+    github: https;//github.com/RedMads/
+    email: redmads@protonmail.com
+    
+- RedMad :$
+-------------------------------------------------------
+=end
+
+
+# some cool moduels !
 require "os"
 require "colorize"
 require_relative "src/banner.rb"
 include Banner
 
 
+# the main class
 class RPS
 
     def initialize()
@@ -24,7 +43,8 @@ class RPS
         @ties = 0
 
     end
-
+    
+    # clear the console in different opreating systems !
     def clear()
         
         if OS.linux? or OS.mac?
@@ -40,14 +60,15 @@ class RPS
     end
 
 
-
+    # Get Random computer choice !
     def get_computer_choice()
 
         return @elements.keys[rand() * @elements.length]
 
     end
 
-
+    
+    # Get player Choice !
     def get_player_choice()
 
         puts "[1] - rock\n[2] - paper\n[3] - scissors\n\n"
@@ -84,7 +105,8 @@ class RPS
         end
 
     end
-
+    
+    # This Function check the winner !
     def logic(c_choice, p_choice)
 
 
@@ -117,7 +139,8 @@ class RPS
         # ----------  WINNER CHECK END ---------- #
 
     end
-
+    
+    # This function print the status in the console !
     def get_status()
 
         puts "Rounds: #{@rounds}"
@@ -127,7 +150,8 @@ class RPS
         
 
     end
-
+    
+    # This function print the choices in the console !
     def get_choices()
 
         puts "Player choice: #{@player_choice}\n\n"
@@ -135,7 +159,7 @@ class RPS
 
     end
 
-
+    # Here is the funny part ( Playing ) !
     def play()
         
         begin
@@ -175,7 +199,8 @@ class RPS
    
 
     end
-
+    
+    # ask the user to play again or no !
     def again()
 
         print "[?] Play again? (y/n): "
@@ -206,7 +231,7 @@ class RPS
 
     end
     
-
+    # This function play 3 rounds 
     def play_best_of()
 
         while @rounds != 0
@@ -240,6 +265,8 @@ class RPS
 
 end
 
+
+# The main Function !
 def main()
     
     obj = RPS.new()
@@ -248,3 +275,7 @@ def main()
 end
 
 main()
+
+
+
+# ---------- END OF THE SOURCE CODE ---------- #
